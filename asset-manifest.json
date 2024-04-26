@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/react-eur-pay/static/css/main.21bdfe96.css",
-    "main.js": "/react-eur-pay/static/js/main.2fa46528.js",
+    "main.js": "/react-eur-pay/static/js/main.32cc5035.js",
     "index.html": "/react-eur-pay/index.html",
     "main.21bdfe96.css.map": "/react-eur-pay/static/css/main.21bdfe96.css.map",
-    "main.2fa46528.js.map": "/react-eur-pay/static/js/main.2fa46528.js.map"
+    "main.32cc5035.js.map": "/react-eur-pay/static/js/main.32cc5035.js.map"
   },
   "entrypoints": [
     "static/css/main.21bdfe96.css",
-    "static/js/main.2fa46528.js"
+    "static/js/main.32cc5035.js"
   ]
 }
