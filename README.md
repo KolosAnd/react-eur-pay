@@ -29,42 +29,36 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+Task
+====
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Situation
+Paysera users can go to a branch to cash in and/or cash out from Paysera account. There are also commission fees for both cash in and cash out. Only supported currency is EUR.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Commission Fees
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### For Cash In
+Commission fee - 0.03% from total amount, but no more than 5.00 EUR.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+You can get configuration from [API](https://developers.paysera.com/tasks/api/cash-in)
 
-## Learn More
+### For Cash Out
+There are different commission fees for cash out for natural and legal persons.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Natural Persons
+Default commission fee - 0.3% from cash out amount.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1000.00 EUR per week (from monday to sunday) is free of charge.
 
-### Code Splitting
+If total cash out amount is exceeded - commission is calculated only from exceeded amount (that is, for 1000.00 EUR there is still no commission fee).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+You can get configuration from [API](https://developers.paysera.com/tasks/api/cash-out-natural)
 
-### Analyzing the Bundle Size
+#### Legal persons
+Commission fee - 0.3% from amount, but not less than 0.50 EUR for operation.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+You can get configuration from [API](https://developers.paysera.com/tasks/api/cash-out-juridical)
 
-### Making a Progressive Web App
+### Rounding
+After calculating commission fee, it's rounded to the smallest currency item (for example, for EUR currency - cents) to upper bound (ceiled). For example, 0.023 EUR should be rounded to 3 Euro cents.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
