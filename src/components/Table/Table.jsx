@@ -10,7 +10,7 @@ export const Table = () => {
     const [error, setError] = useState(false);
 
     useEffect(() => {
-        fetch('/input.json')
+        fetch(process.env.PUBLIC_URL + '/input.json')
             .then(response => response.json())
             .then(data => setOperations(data.operations))
             .catch(error => console.error('Error loading the data', error));
