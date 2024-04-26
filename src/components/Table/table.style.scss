@@ -1,0 +1,30 @@
+
+
+.table-wrap{
+  width: 100%;
+
+  .tables-container{
+    display: flex;
+    width: fit-content;
+    margin: 0 auto 20px;
+  }
+  td {
+    padding: 4px 5px;
+  }
+  button {
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.87);
+    color: #242424;
+    padding: 4px 12px;
+  }
+}
+
+.error-wrap {
+  h2 {
+    text-align: center;
+  }
+}
+
+
